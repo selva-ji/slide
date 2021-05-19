@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    var i=0;
+    var image=[];
+    var time=3000;
+
+    image[0]='image.jpg';
+    image[1]='image1.jpg';
+    image[2]='image2.jpg';
+    image[3]='image3.jpg';
+    image[4]='image4.jpg';
+    image[5]='image5.jpg';
+
+    function chgimg(){
+        document.slide.src=image[i];
+        if (i<image.length -1){
+            i++;
+        } else {
+            i=0;
+        }
+        setTimeout("chgimg()",time);
+    }
+    window.onload=chgimg;
+  </script>
+</head>
+
+<body>
+  <img name="slide" width="400px" height="400px">
+</body>
+</html>
